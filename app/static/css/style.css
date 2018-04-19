@@ -25,7 +25,7 @@ body a{
 	text-decoration:none;
 }
 h1,h2,h3,h4,h5,h6{
-	margin:0;			   
+	margin:0;
 }
 p{
 	margin:0;
@@ -38,7 +38,7 @@ body a:hover{
 	text-decoration:none;
 }
 /*--banner--*/
-.banner{	
+.banner{
 	min-height: 700px;
     background: url(../images/baner.jpg)no-repeat 0px 0px;
 	padding-bottom: 10em;
@@ -62,13 +62,13 @@ body a:hover{
 }
 .header {
 	padding-top: 4em;
-}	
+}
 .head-logo h1{
 	font-size: 6em;
 	font-family: 'MedulaOne-Regular';
 }
 .head-logo a{
-  color: #EF3DBE; 
+  color: #EF3DBE;
 }
 .head-logo{
 	float:left;
@@ -92,7 +92,7 @@ body a:hover{
 	-ms-border-radius: 14%;
 }
 .top-nav a:focus{
-  outline: none !important;	
+  outline: none !important;
 }
 .nav > li > a:hover, .nav > li > a:focus, .nav > li > a.active {
   color: #EF3DBE !important;
@@ -400,7 +400,7 @@ ul.social-slide li i.mac{
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	-ms-border-radius: 50%;
-	
+
 }
 .welcome-imgs:hover .textbox {
 	-webkit-transform: scale(1.5);
@@ -569,7 +569,7 @@ h3.hdng {
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
 	-o-transition: 0.5s all;
-	-ms-transition: 0.5s all;	
+	-ms-transition: 0.5s all;
 	-webkit-appearance: none;
 }
 .footer-grids form input[type="submit"]:hover{
@@ -665,7 +665,7 @@ h3.hdng {
 	cursor: pointer;
 	position: relative;
 	line-height: 0px;
-	
+
 }
 .nbs-flexisel-item > img {
 	cursor: pointer;
@@ -683,7 +683,7 @@ h3.hdng {
 	positon: relative;
 }
 .biseller-info {
-	margin:1em 0 0 0; 
+	margin:1em 0 0 0;
 }
 /*--Navigation --*/
 .nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
@@ -878,7 +878,7 @@ h3.hdg {
   border-radius:4px;
   -webkit-border-radius:4px;
 	-moz-border-radius:4px;
-}  
+}
 .grid_5{
 	background:none;
 	padding:2em 0;

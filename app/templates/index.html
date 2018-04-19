@@ -11,23 +11,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Toys Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+<meta name="keywords" content="Toys Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //Custom Theme files -->
-<link href="../static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="../staticcss/styles.css?v=1.6" rel="stylesheet">
-<link href="../static/css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" media="all">
+<!-- <link href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" rel="stylesheet" media="all"> -->
+<link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
-<script src="../static/js/jquery-1.11.1.min.js"></script> 
-<script src="../static/js/scripts.js?v=1.7"></script>
-<!-- //js -->	
+<script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+<!-- //js -->
 <!-- start-smoth-scrolling-->
-<script type="text/javascript" src="../static/js/move-top.js"></script>
-<script type="text/javascript" src="../static/js/easing.js"></script>	
+<script type="text/javascript" src="{{ url_for('static', filename='js/move-top.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/easing.js') }}"></script>
 <script type="text/javascript">
 		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
+			$(".scroll").click(function(event){
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 			});
@@ -42,13 +42,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="container-fluid">
 				<nav class="pull">
 					<ul class="nav">
-						<li><a href="index.html" class="active"> Home</a></li>
-						<li><a href="about.html"> About</a></li>
+						<li><a href="{{ url_for('index') }}"> Home</a></li>
+						<li><a href="{{ url_for('about') }}"> About</a></li>
 						<li><a href="#" class="menu">Portfolio<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
 							<ul class="nav-sub">
-								<li><a href="portfolio.html">Portfolio 1</a></li>                                             
-								<li><a href="portfolio.html">Portfolio 2</a></li>																								
-								<li><a href="portfolio.html">Portfolio 3</a></li> 
+								<li><a href="{{ url_for('portfolio') }}">Portfolio 1</a></li>
+								<li><a href="{{ url_for('portfolio') }}">Portfolio 2</a></li>
+								<li><a href="{{ url_for('portfolio') }}">Portfolio 3</a></li>
 							</ul>
 							<script>
 								$( "li a.menu" ).click(function() {
@@ -57,8 +57,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								});
 								});
 							</script>
-						<li><a href="codes.html"> Codes</a></li>
-						<li><a href="contact.html"> Mail us</a></li>
+						<li><a href="{{ url_for('codes') }}"> Codes</a></li>
+						<li><a href="{{ url_for('contact') }}"> Mail us</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -66,13 +66,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="header-top">
 			<div class="container">
 				<div class="head-logo">
-					<h1><a href="index.html">Toys</a></h1>
+					<h1><a href="{{ url_for('index') }}">Toys</a></h1>
 				</div>
 				<div class="top-nav">
 					<div class="hero fa-navicon fa-2x nav_slide_button" id="hero">
-						<a href="#"><img src="../static/images/menu-icon.png" alt=""></a>
-					</div>	
-				</div>	
+						<a href="#"><img  src="../static/images/menu-icon.png" alt=""></a>
+					</div>
+				</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
@@ -98,7 +98,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						  $('.events').append("<li>after event fired.</li>");
 						}
 					  });
-				
+
 					});
 				</script>
 				<!--//End-slider-script-->
@@ -127,8 +127,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</li>
 					</ul>
 				</div>
-			</div>			
-		</div>			
+			</div>
+		</div>
 	</div>
 	<div class="clearfix"> </div>
 	<!--//header -->
@@ -180,7 +180,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<!--//welcome-->
 	<!-- services -->
-	<div class="services">
+	<div class="services" id="services">
 		<div class="container">
 			<h3 class="hdng">Services</h3>
 			<div class="services-info">
@@ -231,16 +231,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h4>cum soluta nobis est eligendi</h4>
 					<p>Itaque earum rerum hic tenetur a sapiente delectus aut reiciendis </p>
 					<div class="clearfix"> </div>
-				</div>			
+				</div>
 				<div class="clearfix"> </div>
-			</div>			
+			</div>
 		</div>
 	</div>
 	<!-- //services -->
 	<!--footer-->
 	<div class="footer">
 		<div class="container">
-			<div class="footer-row">								
+			<div class="footer-row">
 				<div class="col-md-3 footer-grids">
 					<h3>Flickr Posts</h3>
 					<div class="footer-grd">
@@ -277,32 +277,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="clearfix"> </div>
 				</div>
 				<div class="col-md-3 footer-grids">
-					<h3>Navigation</h3>					
+					<h3>Navigation</h3>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About us</a></li>
-						<li><a href="portfolio.html">Portfolio</a></li>
-						<li><a href="codes.html">Codes</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="{{ url_for('index') }}">Home</a></li>
+						<li><a href="{{ url_for('about') }}">About us</a></li>
+						<li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+						<li><a href="{{ url_for('codes')}}">Codes</a></li>
+						<li><a href="{{ url_for('contact') }}">Contact</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 footer-grids">
 					<h3>Support</h3>
 					<ul>
-						<li><a href="index.html">Services</a></li>
+						<li><a href="#services">Services</a></li>
 						<li><a href="#">Help Center</a></li>
-						<li><a href="contact.html">Mail to Us</a></li>
+						<li><a href="{{ url_for('contact') }}">Mail to Us</a></li>
 					</ul>
 				</div>
-				<div class="col-md-3 footer-grids">	
+				<div class="col-md-3 footer-grids">
 					<h3>Newsletter</h3>
 					<p>It was popularised in the 1960s with the release Ipsum. <p>
-					<form>					 
+					<form>
 					    <input type="text" class="text" value="Enter Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Email';}">
-						<input type="submit" value="Go">					 
+						<input type="submit" value="Go">
 					</form>
 					<div class="clearfix"> </div>
-					<div class="icons">	
+					<div class="icons">
 						<ul>
 							<li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"> </a></li>
 							<li><a class="twt" href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"> </a></li>
@@ -319,11 +319,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 	<div class="footer-bottom">
-		<div class="container">		
-			<p> © 2015 Toys . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>					
+		<div class="container">
+			<p> © 2015 Toys . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
 		</div>
 	</div>
-	<!--//footer-->		
+	<!--//footer-->
 	<!--smooth-scrolling-of-move-up-->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -332,12 +332,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				containerID: 'toTop', // fading element id
 				containerHoverID: 'toTopHover', // fading element hover id
 				scrollSpeed: 1200,
-				easingType: 'linear' 
+				easingType: 'linear'
 			};
 			*/
-			
+
 			$().UItoTop({ easingType: 'easeOutQuart' });
-			
+
 		});
 	</script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
